@@ -567,7 +567,8 @@ footer {
 }
 
 .footer-bottom {
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
     padding-top: 2rem;
     border-top: 1px solid #ddd;
     color: var(--text-muted);
