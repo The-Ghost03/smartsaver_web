@@ -574,7 +574,18 @@ footer {
     color: var(--text-muted);
     font-size: 0.9rem;
 }
-
+@media (max-width: 768px) {
+    .footer-bottom {
+        flex-direction: column;
+        /* Empile les éléments verticalement */
+        align-items: center;
+        /* Centre les éléments horizontalement */
+        text-align: center;
+        /* Centre le texte */
+        gap: 1rem;
+        /* Ajoute un petit espace entre les éléments empilés */
+    }
+}
 .reveal {
     opacity: 0;
     transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
