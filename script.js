@@ -1,6 +1,5 @@
 // ==========================================
 // ⚙️ CONFIGURATION DES LIENS DE TÉLÉCHARGEMENT
-// Remplissez ces liens quand votre app sera prête
 // ==========================================
 const LINK_ANDROID = "lien_vers_votre_apk_ou_play_store_ici";
 const LINK_IOS = "lien_vers_votre_app_store_ici";
@@ -18,21 +17,20 @@ document.addEventListener("DOMContentLoaded", () => {
     currentOS = "ios";
   }
 
-  // Mise à jour dynamique des boutons selon l'OS
+  // Mise à jour dynamique des boutons (sans écraser le SVG)
   downloadButtons.forEach((btn) => {
+    const textSpan = btn.querySelector(".btn-text"); // On cible uniquement le texte
+
     if (currentOS === "android") {
       btn.href = LINK_ANDROID;
-      btn.innerHTML = `🤖 Télécharger pour Android`;
-      // Le texte de la notice APK reste visible
+      if (textSpan) textSpan.textContent = `Télécharger pour Android`;
     } else if (currentOS === "ios") {
       btn.href = LINK_IOS;
-      btn.innerHTML = `🍏 Télécharger sur l'App Store`;
-      // On cache la notice sur les sources inconnues (inutile sur iPhone)
-      if (apkNotice) apkNotice.style.display = "none";
+      if (textSpan) textSpan.textContent = `Télécharger sur l'App Store`;
+      if (apkNotice) apkNotice.style.display = "none"; // Cache la notice APK sur iPhone
     } else {
-      // Comportement sur Ordinateur (PC/Mac) : on laisse le bouton par défaut
       btn.href = "#download";
-      btn.innerHTML = `📱 Télécharger l'App`;
+      if (textSpan) textSpan.textContent = `Obtenir l'App Gratuitement`;
     }
   });
 
