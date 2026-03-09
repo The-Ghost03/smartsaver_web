@@ -1,17 +1,17 @@
 <!doctype html>
 <html lang="fr">
   <head>
-    <link rel="icon" type="image/png" href="assets/ico.png" />
+    <link rel="icon" type="image/png" href="assets/logo.png" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SmartSaver - Votre partenaire financier</title>
-    <link rel="icon" type="image/png" href="assets/logo.png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <header id="header">
       <a href="#" class="logo-link">
@@ -37,9 +37,10 @@
           <polyline points="7 10 12 15 17 10"></polyline>
           <line x1="12" y1="15" x2="12" y2="3"></line>
         </svg>
-        <span>Télécharger l'App</span></a
-      >
+        <span class="btn-text">Télécharger l'App</span>
+      </a>
     </header>
+
     <section class="hero">
       <div class="hero-content reveal fade-bottom">
         <h1>Gérez votre argent, <span>simplement.</span></h1>
@@ -79,6 +80,7 @@
         </div>
       </div>
     </section>
+
     <section id="tontine" class="feature-section section-light">
       <div class="feature-text reveal fade-right">
         <div class="badge">Tontine</div>
@@ -129,22 +131,25 @@
         <div class="badge badge-yellow">Épargne</div>
         <h2>Épargnez à votre rythme, sans pression.</h2>
         <p>
-          Planifiez votre avenir financier avec notre portefeuille d'épargne
-          dédié. Choisissez un modèle prévu avec toutes ses options dans l'appli
-          et lancez-le en un clic.
+          Planifiez votre avenir financier avec notre portefeuille d'épargne.
+          Optez pour un modèle fixe prédéfini ou choisissez la flexibilité
+          totale avec notre mode d'épargne libre.
         </p>
         <ul class="feature-list">
           <li>
-            <strong>Exemple concret :</strong> Épargnez 1000 FCFA/Jours sur 30
-            jours.
+            <strong>Épargne Fixe ou Libre :</strong> Épargnez un montant fixe
+            (ex: 1000F/jour) ou déposez le montant de votre choix, quand vous le
+            souhaitez.
           </li>
           <li>
-            <strong>Résultat garanti :</strong> Obtenez 30 000 FCFA à la fin de
-            la période.
+            <strong>Gestion par Sprints :</strong> Votre épargne est organisée
+            par cycles (sprints). À la fin de chaque sprint, vous pouvez retirer
+            vos fonds.
           </li>
           <li>
-            <strong>Validation sécurisée :</strong> Un admin valide vos
-            transactions pour plus de sécurité.
+            <strong>Frais de retrait transparents :</strong> Des frais de
+            déblocage clairs s'appliquent lors de vos retraits à la fin de
+            chaque période d'épargne.
           </li>
         </ul>
       </div>
@@ -176,9 +181,9 @@
           <div class="testimonial-card">
             <div class="stars">★★★★★</div>
             <p>
-              "J'ai lancé mon plan d'épargne de 1000F par jour pour préparer les
-              fêtes. L'application est super fluide et voir mon solde augmenter
-              me motive tous les jours !"
+              "L'épargne libre est géniale ! Je dépose ce que je peux quand je
+              veux, et je récupère mon argent à la fin de mon sprint pour mes
+              projets."
             </p>
             <div class="author">
               <div class="avatar avatar-2">K</div>
@@ -229,7 +234,7 @@
             <polyline points="7 10 12 15 17 10"></polyline>
             <line x1="12" y1="15" x2="12" y2="3"></line>
           </svg>
-          <span>Télécharger l'App SmartSaver</span>
+          <span class="btn-text">Télécharger l'App SmartSaver</span>
         </a>
         <p id="apk-notice-text" class="apk-notice">
           Si vous téléchargez un fichier APK, autorisez l'installation depuis
@@ -251,13 +256,12 @@
             en toute simplicité.
           </p>
         </div>
-
         <div class="footer-contact">
           <h4>Contactez-nous</h4>
           <ul>
             <li>
-              <span class="icon">
-                <svg
+              <span class="icon"
+                ><svg
                   width="20"
                   height="20"
                   viewBox="0 0 24 24"
@@ -270,14 +274,12 @@
                   <path
                     d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
                   ></path>
-                  <polyline points="22,6 12,13 2,6"></polyline>
-                </svg>
-              </span>
-              <a href="mailto:info@smartsaver.ci">info@smartsaver.ci</a>
+                  <polyline points="22,6 12,13 2,6"></polyline></svg></span
+              ><a href="mailto:info@smartsaver.ci">info@smartsaver.ci</a>
             </li>
             <li>
-              <span class="icon">
-                <svg
+              <span class="icon"
+                ><svg
                   width="20"
                   height="20"
                   viewBox="0 0 24 24"
@@ -289,14 +291,12 @@
                 >
                   <path
                     d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
-                  ></path>
-                </svg>
-              </span>
-              <a href="tel:+2250153333076">+225 01 53 33 30 76</a>
+                  ></path></svg></span
+              ><a href="tel:+2250153333076">+225 01 53 33 30 76</a>
             </li>
             <li>
-              <span class="icon">
-                <svg
+              <span class="icon"
+                ><svg
                   width="20"
                   height="20"
                   viewBox="0 0 24 24"
@@ -309,15 +309,22 @@
                   <path
                     d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
                   ></path>
-                  <circle cx="12" cy="10" r="3"></circle>
-                </svg>
-              </span>
-              <span>Abidjan, Côte d'Ivoire</span>
+                  <circle cx="12" cy="10" r="3"></circle></svg></span
+              ><span>Abidjan, Côte d'Ivoire</span>
             </li>
           </ul>
         </div>
 
-        <div class="footer-spacer"></div>
+        <div class="footer-links">
+          <h4>Informations Légales</h4>
+          <ul>
+            <li><a href="cgu.html">Conditions Générales d'Utilisation</a></li>
+            <li>
+              <a href="policy.html">Politique de Confidentialité</a>
+            </li>
+            <li><a href="#">Mentions Légales</a></li>
+          </ul>
+        </div>
       </div>
       <div class="footer-bottom">
         <div class="footer-left">
@@ -328,7 +335,6 @@
         </div>
       </div>
     </footer>
-
     <script src="script.js"></script>
   </body>
 </html>

@@ -471,6 +471,7 @@ header.scrolled {
     margin-bottom: 0;
 }
 
+
 /* --- Footer --- */
 footer {
     background: var(--bg-light);
@@ -478,7 +479,6 @@ footer {
     border-top: 1px solid #eaeaea;
 }
 
-/* Flexbox pour répartir uniformément avec le contact au centre */
 .footer-content {
     display: flex;
     justify-content: space-between;
@@ -488,9 +488,10 @@ footer {
     margin-bottom: 4rem;
 }
 
+/* 1. Colonne Marque */
 .footer-brand {
     flex: 1;
-    min-width: 300px;
+    min-width: 250px;
     max-width: 350px;
 }
 
@@ -499,22 +500,13 @@ footer {
     font-size: 1rem;
 }
 
-.footer-spacer {
-    flex: 1;
-    max-width: 350px;
-    display: none;
-}
-
-/* Caché sur mobile, utile sur grand écran */
-
-/* Bloc contact centré */
+/* 2. Colonne Contact (Centrée) */
 .footer-contact {
     flex: 1;
-    min-width: 300px;
+    min-width: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Centre le contenu horizontalement */
     text-align: center;
 }
 
@@ -539,19 +531,6 @@ footer {
     color: var(--text-muted);
 }
 
-/* Icônes SVG modernes */
-.icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--accent);
-}
-
-.icon svg {
-    stroke: var(--accent);
-    transition: stroke 0.3s ease;
-}
-
 .footer-contact a {
     color: var(--text-muted);
     font-weight: 600;
@@ -566,6 +545,57 @@ footer {
     stroke: var(--primary);
 }
 
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+}
+
+.icon svg {
+    stroke: var(--accent);
+    transition: stroke 0.3s ease;
+}
+
+/* 3. Colonne Liens Légaux (Alignée à droite) */
+.footer-links {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    /* Aligne le contenu à droite sur Desktop */
+    text-align: right;
+}
+
+.footer-links h4 {
+    font-size: 1.3rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+.footer-links ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links li {
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: var(--text-muted);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--accent);
+}
+
+
+/* Bas de page */
 .footer-bottom {
     display: flex;
     justify-content: space-between;
@@ -574,18 +604,8 @@ footer {
     color: var(--text-muted);
     font-size: 0.9rem;
 }
-@media (max-width: 768px) {
-    .footer-bottom {
-        flex-direction: column;
-        /* Empile les éléments verticalement */
-        align-items: center;
-        /* Centre les éléments horizontalement */
-        text-align: center;
-        /* Centre le texte */
-        gap: 1rem;
-        /* Ajoute un petit espace entre les éléments empilés */
-    }
-}
+
+/* Animations au scroll */
 .reveal {
     opacity: 0;
     transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
@@ -608,14 +628,8 @@ footer {
     transform: translateX(-50px);
 }
 
-@media (min-width: 993px) {
 
-    /* Affiche l'espaceur uniquement sur Desktop pour forcer le centrage absolu */
-    .footer-spacer {
-        display: block;
-    }
-}
-
+/* --- Media Queries --- */
 @media (max-width: 992px) {
     h1 {
         font-size: 2.8rem;
@@ -654,16 +668,31 @@ footer {
         display: none;
     }
 
-    /* Sur mobile, on empile tout de façon centrée */
+    /* Empilement du Footer sur mobile */
     .footer-content {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        gap: 3rem;
     }
 
     .footer-brand {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .footer-links {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
     }
 }
