@@ -1,0 +1,5 @@
+# https://smartsaver.ci/
+User-agent: *
+Allow: /
+
+Sitemap: https://smartsaver.ci/sitemap.xml
