@@ -1,0 +1,1 @@
+import{R as n,P as e}from"./index-CW-lF_Ml.js";import{a as o,L as l}from"./LegalHtmlBlock-Doy7zLTG.js";import"./motion-variants-BbjKbkIm.js";import"./arrow-left-MCWxtuy8.js";function m(){const{t}=n();return e.jsx(o,{badge:null,title:t("legal.mentions.title"),description:t("legal.mentions.description"),children:e.jsx(l,{html:t("legal.mentions.content")})})}export{m as default};
